@@ -41,7 +41,7 @@ To run the [Super Sudoku Solver](https://eb-super-sudoku-solver.onrender.com) lo
     git clone https://github.com/erickfb5/super-sudoku-solver.git
 2. Navigate to the project directory:
    ```bash
-   cd personal-library-app
+   cd super-sudoku-solver
 3. Install the required dependencies:
    ```bash
    npm install
