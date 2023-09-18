@@ -2,8 +2,7 @@
 <html>
 
 <head>
-	<title>Sudoku Solver</title>
-	<meta name="description" content="An example for the fCC QA Sudoku Solver project" />
+	<title>Super Sudoku Solver</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +11,7 @@
 
 <body>
 	<header>
-		<h1>Sudoku Solver</h1>
+		<h1>Super Sudoku Solver</h1>
 	</header>
 	<div class="container">
 		<div class="form-container">
@@ -28,8 +27,9 @@
         <div id="error-msg"></div>
         </form>
         <form id="check-form">
-          <p>Coordinate (A1): <input id="coord" class="checker" type="text" name="coordinate"></p>
-          <p>Value (1-9): <input class="checker" type="text" id="val" name="value"></p>
+          <p>Coordinate (A1): 
+            <input id="coord" class="checker" type="text" name="coordinate" maxlength="2"></p>
+          <p>Value (1-9): <input class="checker" type="text" id="val" name="value" maxlength="2"></p>
           <input type="button" id="check-button" value="Check Placement">
         </form>
         <span id="error"></span>

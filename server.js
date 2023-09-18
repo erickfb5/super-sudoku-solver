@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const runner = require("./test-runner");
+const runner = require("./tests/test-runner.js");
 const { loggerMiddleware, notFoundMiddleware } = require("./middlewares/");
 const { rootRoutes, sudokuRoutes, testingRoutes } = require("./routes");
 
@@ -12,11 +12,11 @@ const app = express();
 app.use(loggerMiddleware);
 
 app.use("/public", express.static(process.cwd() + "/public"));
-app.use(cors({ origin: "*" })); //For FCC testing purposes only
+app.use(cors({ origin: "*" })); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-testingRoutes(app);
+app.use('/_api', testingRoutes);
 
 app.use(rootRoutes)
 app.use(sudokuRoutes)
